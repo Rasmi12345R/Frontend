@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing Script", serif;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(171, 37, 37);
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(42, 238, 8);
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin:  15px;
+
+}
+
+.menu li a {
+    text-transform: capitalize;
+    color: wheat;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 1s ease;
+}
+
+.menu li a:hover {
+    color: blue;
+    font-size: 1.1rem;
+
+}
+
+.nepal {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nepal div {
+    background-color: white;
+    height: 2px;
+    width: 20px;
+    margin: 3px 0;
+}
+
+@media screen and (max-width:768px) {
+    .nepal {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        background-color: green;
+        width: 60%;
+        text-align: center;
+right: 0;      
+    }
+
+    .menu.data {
+        display: flex;
+
+    }
+
+    .menu li {
+        margin: 20px;
+        text-align: center;
+
+    }
+}

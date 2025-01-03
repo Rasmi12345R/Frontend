@@ -1,0 +1,33 @@
+*{
+ box-sizing:border-box;
+}
+.responsive{
+    padding: 0 6px;
+    width: 25%;
+    float: left;
+}
+.data{
+    border:1px solid #000000;
+}
+.data img{
+    height: 200px;
+    width: 100%;
+    object-fit:cover;
+}   
+.desc{
+    padding: 10px;
+    text-align: center;
+}
+@media only screen and (max-width:800px)
+{
+    .responsive{
+        width: 50%;
+        margin: 6px 0;
+    }
+}
+@media only screen and (max-width:450px)
+{
+    .responsive{
+        width: 100%;
+    }
+}

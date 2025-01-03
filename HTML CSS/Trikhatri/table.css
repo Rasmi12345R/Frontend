@@ -1,0 +1,17 @@
+.title1 {
+    background-color: blue;
+    font-size: 35px;
+    color: rgb(30, 255, 0);
+}
+
+.title2 {
+    background-color: RED;
+    font-size: 35px;
+    color: white;
+}
+
+p {
+    font-size: 25px;
+    background-color: blueviolet;
+    color: brown;
+}

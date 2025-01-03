@@ -1,0 +1,43 @@
+p {
+    color: aquamarine;
+    font-size: 50px;
+    background-color: blue;
+    padding: 5px;
+}
+
+
+table {
+    width: 50%;
+    height: 50px;
+}
+
+table,
+th,
+td {
+    border: 1px Solid black;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+tr:nth-child(even) {
+    background-color: blue;
+}
+
+th:nth-child(even) {
+    background-color: rgb(133, 231, 64);
+
+}
+td:nth-child(even) {
+    background-color: rgb(133, 231, 64);
+
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+ul {
+    list-style-type: square;
+}

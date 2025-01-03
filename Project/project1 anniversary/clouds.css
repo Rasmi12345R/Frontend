@@ -1,0 +1,28 @@
+ body {
+     background-color: black;
+     justify-items: center
+
+ }
+ .years{
+   display: flex;
+   flex-direction: row;
+   align-items: end;
+ }
+
+ 
+ h1{
+    color: white;
+ }
+
+ p{
+   color:white;
+   margin-top: 200px;
+   text-align: center;
+}
+h2{
+  color:yellow;
+font-size: 200px;
+margin-top: 200px;
+text-align: center;
+}
+
