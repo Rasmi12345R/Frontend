@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Caveat';
+}
+
+nav {
+    Display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: blue;
+    padding: 10px 20px;
+    background-color: red;
+}
+
+.Mylogo img{
+    height: 100px;
+    width: 100px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+
+}
+
+.list li {
+    margin: 0 15px;
+    margin-top: 6px;
+}
+
+.list li a {
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
+    justify-items: center;
+    transition: color 1s ease;
+
+
+}
+.button{
+    color: red;
+    font-size: 15px;
+    background-color: black;
+    padding: 10px 5px;
+    border:none;
+
+}
+.list li a:hover{
+    color: yellow;
+    font-size: 26px;
+}
+.optionbar{
+    display: none;
+    flex-direction: column;
+    gap:6px;
+    cursor: pointer;
+}
+.optionbar div{
+    background-color: black;
+    height: 2px;
+    width: 15px;
+}
+@media screen and (max-width:406px){
+ .list{
+    display:none;
+    flex-direction: column;
+    top:60px;
+    position: absolute;
+    background-color: purple;
+    width: 50%;
+    right: 0;
+    padding: 10px 0;
+    text-align: center;
+ }
+ .optionbar{
+    display: flex;
+ }
+ .Mylogo img{
+    height: 30px;
+    width: 30px;
+ }
+}
+.list.data{
+    display:flex
+}
