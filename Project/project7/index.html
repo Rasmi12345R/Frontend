@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Slabo+27px&family=Spicy+Rice&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slides">
+            <img class="active" src="img/image1.jpg" alt="image"/>
+            <img src="img/image2.jpeg" alt="image"/>
+            <img src="img/image3.png" alt="image"/>
+            <img src="img/image4.png" alt="image"/>
+            <img src="img/image5.jpeg" alt="image"/>
+        </div>
+        <div class="button">
+            <span class="next"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="preview"><i class="fa-solid fa-chevron-left"></i></span>
+        </div>
+           <div class="dotcontainer">
+             <div class ="dot active"attr="0" onclick="switchImage(this)"></div>
+             <div class ="dot"attr="1" onclick="switchImage(this)"></div>
+             <div class ="dot"attr="2" onclick="switchImage(this)"></div>
+             <div class ="dot"attr="3" onclick="switchImage(this)"></div>
+             <div class ="dot"attr="4" onclick="switchImage(this)"></div>
+            </div>
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

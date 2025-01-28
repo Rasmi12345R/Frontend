@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.slide-container{
+    width:100%;
+    height: 650px;
+    border:2px Solid #400ef3;
+    background-color:#ede6d6 ;
+
+    position:relative;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+}
+.slidecontainer.slides{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    position: absolute;
+}
+/* for converting last image to first*/
+.slide-container .slides  img:not(.active){
+    left:-100%;
+    top:0%
+
+}
+/*for icon ....*/ 
+span.next,span.preview{
+top:50%;
+position: absolute;
+color:black;
+font-size: 24px;
+font-weight: bold;
+border-radius: 3px;
+cursor: pointer;
+z-index: 1;
+user-select: none;
+padding:14px;
+}
+span.preview{
+left: 20px;
+}
+span.next{
+right: 20px;
+}
+/*for hover*/
+span.preview:hover,
+span.next:hover{
+    background-color: rgb(5, 215, 19);
+    color:black;
+    opacity: 0.1;
+}
+/*for animation*/
+@keyframes next1{
+    from{
+left: 0;
+    }
+    to{
+left:-100%;
+    }
+}
+@keyframes next2{
+    from{
+   left:100%;
+    }
+    to{
+      left: 0%;  
+    }
+}
+@keyframes preview1{
+    from{
+left: 0%;
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes preview2{
+    from{
+left:-100%;
+    }
+    to{
+      left: 0%;  
+    }
+}
+.dotcontainer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
+}
+.dotcontainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    border: 3px solid rgba(241, 241, 245, 0.769);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6 ease;
+
+}
+.dotcontainer .active{
+    background-color: blue;
+}

@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>landing page</title>
+  <!--tailwindcss-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+  <!-- style.css -->
+  <link rel="stylesheet" href="assests/css/style.css">
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body-->
+  <!--navbar-->
+  <nav class="p-3 flex bg-white justify-between items-center fixed top-0 left-0  right-0 z-50 shadow-md  ">
+    <a href="#" id="brand" class="font-display flex gap-2 items-center flex-1">
+      <img src="./assests/img/logoo.png" alt="logo" class="object-cover max-h-10 max-w-8" />
+      <span class="font-display">Music</span>
+    </a>
+    <div id="nav-menu" class="hidden gap-2 lg:flex 
+         capitalize">
+      <a href="#" class="font-bold font-display hover:text-blue-500">pricing</a>
+      <a href="#" class="font-bold font-display hover:text-blue-500">docs</a>
+      <a href="#" class="font-bold font-display hover:text-blue-500">change</a>
+      <a href="#" class="font-bold font-display hover:text-blue-500">blogs</a>
+      <a href="#" class="font-bold font-display hover:text-blue-500">login</a>
+    </div>
+    <div class="hidden lg:flex flex-1 justify-end">
+      <button class="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+        <span class="font-display font-400">Developer</span> <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <div>
+      <button class="p-2 lg:hidden" onclick="handlemenu()">
+        <i class="fa-solid fa-bars text-gray-600 text-20px"></i>
+      </button>
+    </div>
+    <!-- for mobile view -->
+    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white p-3 inset-3">
+      <div class="flex justify-between">
+        <a href="#" class="flex gap-2 items-center">
+          <img src="./assests/img/logoo.png" class="object-fit max-w-12 max-h-12" />
+          <span class="font-display font medium text-lg">Music</span></a>
+        <button class="p-2 md:hidden" onclick="handlemenu()"><i class="fa-solid fa-xmark text-gray-500"></i></button>
+      </div>
+      <div class="mt-10 ">
+        <a href="#"
+          class="font-medium font-display m-3 p-3 hover:border-gray-500 block rounded-lg  hover:bg-gray-100">pricing</a>
+        <a href="#"
+          class="font-medium font-display m-3 p-3 hover:border-gray-500 block rounded-lg  hover:bg-gray-100">docs</a>
+        <a href="#"
+          class="font-medium font-display m-3 p-3 hover:border-gray-500 block rounded-lg hover:bg-gray-100">change</a>
+        <a href="#"
+          class="font-medium font-display m-3 p-3 hover:border-gray-500 block rounded-lg hover:bg-gray-100">blogs</a>
+        <a href="#"
+          class="font-medium font-display m-3 p-3 hover:border-gray-500 block rounded-lg hover:bg-gray-100">login</a>
+      </div>
+      <div class="h-[2px] bg-gray-300"></div>
+      <button class="mt-6 w-full flex gap-2 items-center px-4 py-6 rounded-lg hover:bg-gray-100">
+        <span class="font-display font-400">Developer</span> <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </nav>
+  <main class="mt-16 ">
+    <div class="min-h-screen bg-gradient-to-b from-purple-100 via-orange-100 to-transparent">
+      <div class="max-w-4xl mx-auto px-6 pt-6 pb-16 flex flex-col sm:items-center sm:text-center sm:pt-12 sm:max-w-2xl">
+        <div class=" flex flex-row items-center my-6 gap-2 border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1
+        w-fit shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+          <div class="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-600"></div>
+          <p class="font-display font-medium text-yellow-600">v0.21.1:
+            <span class="text-yellow-800">Find-in-page bug fixes</span>
+          </p>
+          <i class="fa-solid fa-arrow-right text-yellow-600 "></i>
+        </div>
+        <div class="hidden sm:flex gap-8 my-6">
+          <div class="flex justify-center gap-2 items-center text-gray-500"><i
+              class="fa-solid fa-file-code text-sm"></i>
+            <p>code optional</p>
+          </div>
+          <div class="flex justify-center gap-2 items-center text-gray-500"><i class="fa-solid fa-hand-pointer"></i>
+            <p>drag and drop builder</p>
+          </div>
+          <div class="flex justify-center gap-2 items-center text-gray-500"><i class="fa-solid fa-desktop"></i>
+            <p>windows, mac, linux</p>
+          </div>
+        </div>
+        <h1 class="text-4xl font-semibold  mt-4 sm:text-6xl">web app to desktop app in minutes</h1>
+        <p class="font-display text-xl mt-4 sm:text-2xl sm:mt-8 text-gray-800">take your web app codebase and transform
+          it into a cross platform
+          desktop app with native functionality.</p>
+        <div class="mt-12 flex gap-4 flex-col sm:flex-row">
+          <button
+            class="px-8 py-3 font-semibold rounded-lg text-white bg-blue-500 shadow-sm hover:bg-opacity-90">Download
+            now</button>
+          <button class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800 ">Read
+            docs</button>
+
+        </div>
+      </div>
+      <div class="mx-auto max-w-4xl px-8 py-6">
+        <div class="flex flex-col gap-10">
+          <div class="flex justify-center">
+            <img src="./assests/assets/asset 2.svg" alt="img">
+            <span class="uppercase font-bold">apps powered by to desktop</span>
+            <img class="-scale-x-100 translate-y-1" src="./assests/assets/asset 2.svg" alt="img">
+          </div>
+         
+  
+  
+  
+  
+  
+  
+  
+  
+          <div id="lines-group" class="flex flex-col gap-4">
+            <div
+              id="line1"
+              class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear"
+            >
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 3.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 4.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >LifeAt</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 5.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Convy</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 6.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Morgen</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 7.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Campsite</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 8.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Rise</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 9.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >ClickUp</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 10.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Notion</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 11.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Sunsama</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 12.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Beeper</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 13.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Cal</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 14.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Webstudio</span
+                >
+              </div>
+            </div>
+            <div
+              id="line2"
+              class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear"
+            >
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 15.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 16.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 17.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 18.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 19.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 20.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Moises</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 21.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Basedash</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 22.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Cursor</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 23.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Linear</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 24.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Voiceflow</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 25.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Kitemaker</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 26.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Cron</span
+                >
+              </div>
+            </div>
+            <div
+              id="line3"
+              class="flex md:hidden gap-4 w-screen -translate-x-48 transition-transform ease-linear"
+            >
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 15.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 16.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 17.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 3.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 4.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 5.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 12.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 13.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 14.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 24.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 25.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+              <div
+                class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32"
+              >
+                <img
+                  src="./assests/assets/asset 26.png"
+                  class="w-12 h-12 md:w-16 md:h-16"
+                  alt=""
+                />
+                <span class="text-[12px] font-semibold lg:text-[16px]"
+                  >Unbounce1</span
+                >
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        </div>
+      </div>
+    </div>
+    <!-- step by step -->
+    <div class="flex flex-col gap-6 mx-auto max-w-5xl px-6 py-12 mt-20">
+      <h2 class="text-5xl sm:font-semibold mb-14">How it works</h2>-->
+      <!-- step-1 -->
+      <div class="rounded-xl border px-8 py-8 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+          <span
+            class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">step-1</span>
+          <h3 class="text-4xl">Bootstraps straight from your page</h3>
+          <p class="text-lg font-light"> copy and paste your web url into desktop of music with url</p>
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">multiple windows</a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive windows </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive mobile </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">desktop </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">sumitaah </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">raaiii</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+        <div class="pt-12"><img class="max-h-100 max-w-50 h-80 w-50 px-6" src="./assests/img/upload.png" alt="upload" />
+        </div>
+      </div>-->
+      <!-- step-2 -->
+      <div class="rounded-xl border px-8 py-8 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+          <span
+            class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">step-2</span>
+          <h3 class="text-4xl">Bootstraps straight from your page</h3>
+          <p class="text-lg font-light"> copy and paste your web url into desktop of music with url</p>
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">multiple windows</a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive windows </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive mobile </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">desktop </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">sumitaah </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">raaiii</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+        <div class="pt-12 "><img class="max-h-100 max-w-50 h-80 w-50 px-6" src="./assests/img/upload.png"
+            alt="upload" />
+        </div>
+      </div>-->
+      <!-- step-3 -->
+      <div class="rounded-xl border px-8 py-8 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+          <span
+            class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">step-3</span>
+          <h3 class="text-4xl">Bootstraps straight from your page</h3>
+          <p class="text-lg font-light"> copy and paste your web url into desktop of music with url</p>
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">multiple windows</a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive windows </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive mobile </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">desktop </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">sumitaah </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">raaiii</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+        <div class="pt-12"><img class="max-h-100 max-w-50 h-80 w-50 px-6" src="./assests/img/upload.png" alt="upload" />
+        </div>
+      </div>
+      <!-- step-4 -->
+      <div class="rounded-xl border px-8 py-8 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+          <span
+            class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">step-4</span>
+          <h3 class="text-4xl">Bootstraps straight from your page</h3>
+          <p class="text-lg font-light"> copy and paste your web url into desktop of music with url</p>
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">multiple windows</a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive windows </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">responsive mobile </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">desktop </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">sumitaah </a>
+            </li>
+
+            <li class="flex gap-4 items-center ">
+              <i class="fa-solid fa-check "></i>
+              <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                href="">raaiii</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+        <div class="pt-12"><img class="max-h-100 max-w-50 h-80 w-50 px-6" src="./assests/img/upload.png" alt="upload" />
+        </div>
+      </div>
+      <!-- bento grid -->
+      <div class="mx-auto max-w-5xl px-6 py-12">
+        <h2 class="text-5xl font-display sm:font-semibold mb-14 max-w-2xl">To handle the detail of music</h2>
+        <div class="flex flex-col gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows: 96px;">
+          <div class="row-start-1 row-end-3 group rounded-2xl bg-slate-200 bg-opacity-100">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl">Native Notification</h3>
+              <img src="./assests/assets/asset 37.png" alt="img" />
+            </div>
+          </div>
+          <div class="row-start-1 row-end-4 group rounded-2xl bg-slate-200 bg-opacity-100">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl">Native Notification</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. </p>
+              <img src="./assests/assets/asset 38.png" alt="img" />
+            </div>
+
+          </div>
+          <div class="row-start-1 row-end-3 group rounded-2xl bg-slate-200 bg-opacity-100">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl">Native Notification</h3>
+              <img src="./assests/assets/asset 39.png" alt="img" />
+            </div>
+          </div>
+          <div class="row-start-3 row-end-6 group rounded-2xl bg-slate-200 bg-opacity-100">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl">Native Notification</h3>
+              <p>music can heal your heart and soul </p>
+              <img src="./assests/assets/asset 40.png" alt="img" />
+            </div>
+          </div>
+          <div class="row-start-4 row-end-6 group rounded-2xl bg-slate-200 bg-opacity-100">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl">Native Notification</h3>
+              <img src="./assests/assets/asset 37.png" alt="img" />
+            </div>
+          </div>
+          <div class="row-start-3 row-end-6 group rounded-2xl bg-slate-200 bg-opacity-100">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl">Native Notification</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. </p>
+              <img src="./assests/assets/asset 38.png" alt="img" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- testimonial -->
+    <div class="mx-auto max-w-5xl px-6 py-12">
+      <h2 class="text-5xl sm:font-semibold mb-14">customer stories</h2>
+      <div class="rounded-xl border flex flex-col lg:flex-row items-end">
+        <div class="flex flex-col gap-12 p-8">
+          <div class="h-4 w-fit">
+            <img src="./assests/assets/asset 44.svg" alt="img" />
+          </div>
+          <h3 class="text-xl font-display">music is best way to remove stress</h3>
+          <div class="flex gap-3 flex-wrap">
+            <div
+              class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+              <i class="fa-solid fa-check"></i>
+              <span class="font-display font-medium">music can heal</span>
+            </div>
+            <div
+              class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+              <i class="fa-solid fa-check"></i>
+              <span class="font-display font-medium">music can heal</span>
+            </div>
+            <div
+              class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+              <i class="fa-solid fa-check"></i>
+              <span class="font-display font-medium">music can heal</span>
+            </div>
+            <div
+              class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+              <i class="fa-solid fa-check"></i>
+              <span class="font-display font-medium">music can heal </span>
+            </div>
+
+          </div>
+          <p class="text-lg font-light text-gray-500">music is best way to remove stress
+            <span class="text-pink-500">music is best way to remove stress</span>
+            <span class="text-green-600">music is best way to remove stress</span>
+          </p>
+          <div class="flex gap-4">
+            <div class="w-12">
+              <img src="./assests/assets/asset 45.jpeg" alt="img" class="rounded-full" />
+            </div>
+            <div class="flex flex-col">
+              <h3>john doe</h3>
+              <P class="text-blue-500">founder & CEO
+                <a href="#"
+                  class="border-opacity-100 border-b border-dotted border-gray-300 hover:border-solid">clickup</a>
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <img src="./assests/assets/asset 46.png" class="pl-12" alt="img" />
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between gap-4 mt-6">
+        <div class="rounded-2xl bg-slate-200 bg-opacity-100 group">
+          <div class="rounded-2xl p-6 flex flex-col gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                <i class="fa-solid fa-code text-indigo-800"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">Native API</h3>
+            </div>
+            <p class="text-lg font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet
+              itaque, quaerat perferendis,
+              natus aliquid eligendi sapiente rerum reprehenderit impedit in enim debitis nesciunt. Ut neque natus vero
+              asperiores alias!</p>
+            <div class="flex gap-4">
+              <div class="flex">
+                <div
+                  class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                  <img src="./assests/assets/asset 47.png" alt="img" class="min-w-16 min -h-16" />
+                </div>
+                <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                  <img src="./assests/assets/asset 48.jpeg" alt="img" class="min-w-16 min -h-16" />
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3>Rick Paster</h3>
+                <a href="#"
+                  class="border-b border-dotted border-gray-300 border-opacity-100 hover:border-solid w-fit text-gray-500">Rise</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-slate-200 bg-opacity-100 group">
+          <div class="rounded-2xl p-6 flex flex-col gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                <i class="fa-solid fa-code text-indigo-800"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">Native API</h3>
+            </div>
+            <p class="text-lg font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet
+              itaque, quaerat perferendis,
+              natus aliquid eligendi sapiente rerum reprehenderit impedit in enim debitis nesciunt. Ut neque natus vero
+              asperiores alias!</p>
+            <div class="flex gap-4">
+              <div class="flex">
+                <div
+                  class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                  <img src="./assests/assets/asset 47.png" alt="img" class="min-w-16 min -h-16" />
+                </div>
+                <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                  <img src="./assests/assets/asset 48.jpeg" alt="img" class="min-w-16 min -h-16" />
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3>Rick Paster</h3>
+                <a href="#"
+                  class="border-b border-dotted border-gray-300 border-opacity-100 hover:border-solid w-fit text-gray-500">Rise</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-slate-200 bg-opacity-100 group">
+          <div class="rounded-2xl p-6 flex flex-col gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                <i class="fa-solid fa-code text-indigo-800"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">Native API</h3>
+            </div>
+            <p class="text-lg font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet
+              itaque, quaerat perferendis,
+              natus aliquid eligendi sapiente rerum reprehenderit impedit in enim debitis nesciunt. Ut neque natus vero
+              asperiores alias!</p>
+            <div class="flex gap-4">
+              <div class="flex">
+                <div
+                  class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                  <img src="./assests/assets/asset 47.png" alt="img" class="min-w-16 min -h-16" />
+                </div>
+                <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                  <img src="./assests/assets/asset 48.jpeg" alt="img" class="min-w-16 min -h-16" />
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3>Rick Paster</h3>
+                <a href="#"
+                  class="border-b border-dotted border-gray-300 border-opacity-100 hover:border-solid w-fit text-gray-500">Rise</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl flex flex-col bg-black lg:flex-row mt-12 pt-6 lg:pt-10">
+        <div class="flex flex-col gap-4 p-8 lg:flex-1 lg:gap-8">
+          <span class="text-gray-500 font-display font-medium uppercase">ready to start building</span>
+          <h2 class="text-4xl text-white lg:text-5xl">create your desktop app for free</h2>
+          <p class="text-lg font-light text-gray-500 lg:text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Nostrum quisquam dicta, reiciendis eligendi distinctio provident at veritatis mollitia optio itaque.
+            Delectus eligendi labore expedita dolorum fugit animi rem similique eveniet!</p>
+          <button
+            class="bg-blue-500 text-white rounded-lg hover:bg-opacity-90 py-3 capitalize flex justify-center items-center gap-4">
+            <i class="fa-solid fa-download"></i>
+            <span>download to desktop builder</span>
+          </button>
+          <p class="text-gray-400 text-xs italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            explicabo iure harum porro eveniet aliquam, modi accusamus illo voluptates obcaecati sint qui, temporibus
+            vel sit asperiores dicta. Alias, veniam aspernatur.</p>
+        </div>
+        <div class="lg:w-1/2">
+          <img src="./assests/assets/asset 46.png" alt="img">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- pricing -->
+    <div class="mx-auto max-w-5xl px-12 py-12">
+      <h2 class="text-5xl sm:font-semibold mb-14">
+        music is the best
+      </h2>
+      <div class="flex flex-col lg:flex-row mt-6 gap-6">
+
+        <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-blue-200
+        ">
+          <h1 class="text-4xl font-display">Free</h1>
+          <p class=" text-lg font-light font-display">for personal use or testing your app before deploying to
+            customers.</p>
+          <p class="uppercase">key features</p>
+          <ul class="space-y-3"> <!--use for ul only space-y-3-->
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-check"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-check"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+          </ul>
+          <button
+            class="border bg-blue-800 px-8 py-3 text-[#ffffff] rounded-lg hover:border-gray-300 font-display font-medium">Read
+            docs</button>
+        </div>
+
+        <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-blue-200
+        ">
+          <h1 class="text-4xl font-display">Essential</h1>
+          <p class=" text-lg font-light font-display">for simple desktop apps
+          </p>
+          <p class="font-light text-lg"><span class="font-bold text-2xl">$99</span>/month</p>
+          <p class="uppercase">key features</p>
+          <ul class="space-y-3"> <!--use for ul only space-y-3-->
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-check"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-check"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+          </ul>
+          <button
+            class="border bg-blue-800 px-8 py-3 text-[#ffffff] rounded-lg hover:border-gray-300 font-display font-medium">Read
+            docs</button>
+        </div>
+
+
+
+        <div class="border flex-1 relative rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-blue-200
+        ">
+          <p
+            class="text-blue-500 text-sm bg-gray-200 rounded-full w-fit px-4 py-2 font-display font-semibold top-0 right-8 -translate-y-1/2 absolute">
+            most popular</p>
+          <h1 class="text-4xl font-display">Professional</h1>
+          <p class=" text-lg font-light font-display">for sophisticated desktop apps
+          </p>
+          <p class="font-light text-lg"><span class="font-bold text-2xl">$99</span>/month</p>
+          <p class="uppercase">key features</p>
+          <ul class="space-y-3"> <!--use for ul only space-y-3-->
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-check"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-check"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="text-lg font-light text-gray-500">Free for personal use</p>
+            </li>
+          </ul>
+          <button
+            class="border bg-blue-800 px-8 py-3 text-[#ffffff] rounded-lg hover:border-gray-300 font-display font-medium">Read
+            docs</button>
+        </div>
+
+
+
+      </div>
+    </div>
+    <!-- faqs -->
+    <div class="mx-auto max-w-5xl px-6 py-12">
+      <h2 class="text-5xl sm:font-semibold mb-14 ">FAQs</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start ">
+        <div class="group rounded-xl border border-gray-300 bg-gray-100 p-6">
+          <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-1">
+            <p class="font-semibold text-lg capitalize">is to desktop for me</p><i class="fa-solid fa-chevron-down"></i>
+          </dt>
+          <dd id="faq-1" class="hidden text-lg font-light mt-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia explicabo nostrum consequuntur dolor
+              autem, quae tempora laudantium, consequatur sed sint! Officiis id optio suscipit, impedit placeat neque
+              dignissimos alias.</p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-300 bg-gray-100 p-6">
+          <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-2">
+            <p class="font-semibold text-lg capitalize">is to desktop for me</p><i class="fa-solid fa-chevron-down"></i>
+          </dt>
+          <dd id="faq-2" class="hidden text-lg font-light mt-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia explicabo nostrum consequuntur dolor
+              autem, quae tempora laudantium, consequatur sed sint! Officiis id optio suscipit, impedit placeat neque
+              dignissimos alias.</p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-300 bg-gray-100 p-6">
+          <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-3">
+            <p class="font-semibold text-lg capitalize">is to desktop for me</p><i class="fa-solid fa-chevron-down"></i>
+          </dt>
+          <dd id="faq-3" class="hidden text-lg font-light mt-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia explicabo nostrum consequuntur dolor
+              autem, quae tempora laudantium, consequatur sed sint! Officiis id optio suscipit, impedit placeat neque
+              dignissimos alias.</p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-300 bg-gray-100 p-6">
+          <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-4">
+            <p class="font-semibold text-lg capitalize">is to desktop for me</p><i class="fa-solid fa-chevron-down"></i>
+          </dt>
+          <dd id="faq-4" class="hidden text-lg font-light mt-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia explicabo nostrum consequuntur dolor
+              autem, quae tempora laudantium, consequatur sed sint! Officiis id optio suscipit, impedit placeat neque
+              dignissimos alias.</p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-300 bg-gray-100 p-6">
+          <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-5">
+            <p class="font-semibold text-lg capitalize">is to desktop for me</p><i class="fa-solid fa-chevron-down"></i>
+          </dt>
+          <dd id="faq-5" class="hidden text-lg font-light mt-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia explicabo nostrum consequuntur dolor
+              autem, quae tempora laudantium, consequatur sed sint! Officiis id optio suscipit, impedit placeat neque
+              dignissimos alias.</p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-300 bg-gray-100 p-6">
+          <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-6">
+            <p class="font-semibold text-lg capitalize">is to desktop for me</p><i class="fa-solid fa-chevron-down"></i>
+          </dt>
+          <dd id="faq-6" class="hidden text-lg font-light mt-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quia explicabo nostrum consequuntur dolor
+              autem, quae tempora laudantium, consequatur sed sint! Officiis id optio suscipit, impedit placeat neque
+              dignissimos alias.</p>
+          </dd>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <!-- footer -->
+  <footer class="mx-auto  max-w-5xl">
+    <div
+      class="bg-gray-300 px-8 py-12 rounded-lg flex md:flex-row-reverse items-center lg:border-none gap-8 border flex-col-reverse  mt-50">
+      <a href="#" class="font-light font-display">documentation</a>
+      <div class="flex gap-8 text-lg items-center">
+        <a href="#" class="flex gap-8 text-lg hover:text-gray-500"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <a href="#" class="flex gap-2 items-center flex-1">
+        <img src="./assests/img/logoo.png" class="object-cover max-w-12 max-h-12" />
+        <span class="font-display">Music Heals</span>
+      </a>
+    </div>
+     <div class="flex flex-col items-center justify-center gap-6 my-12">
+    <div class="flex justify-center items-center flex-col">
+      <img src="./assests/img/t.png" class="w-14 h-14" alt="logo" />
+      <p>ART</p>
+
+      <p>&copy; <span class="text-sm justify-center items-center text-gray-500 h-16 w-17" id="date"></span> Music.Inc
+        All right reserved</p>
+    </div>
+    </div>
+  </footer>
+  <script src="./assests/js/main.js"></script>
+  </body>
+
+</html>

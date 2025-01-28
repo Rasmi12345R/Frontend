@@ -78,6 +78,10 @@ footer {
 .cloud .menu .social-icon a:hover {
     color: red;
 }
+.cloud.menu.image{
+    display: flex;
+    flex-direction: row;
+}
 
 
 /* copyright */

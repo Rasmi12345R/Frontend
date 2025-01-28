@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" conent="width=device-width, initial-scale=1.0">
+    <title>Slidebar menu</title>ta
+    <!--tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="grid grid-cols-1 md:grid-cols-4 divide-y-4 md:divide-x-4">
+        <div class="p-4 shadow-md z-20 h-screen gap-40 hidden md:block ">
+            <div class="flex flex-row gap-4">
+                <img src="image.jpg" alt="img" class="h-12 w-12 rounded-full">
+                <span class="flex flex-col">
+                    <h1 class="font-bold">Sumita Rai</h1>
+                    <p class="text-sm text-gray-400">sumitarai@gmail.com</p>
+                </span>
+            </div>
+            <nav class="">
+                <div class="flex flex-col gap-4 mt-10 text-gray-400 ">
+                    <h1 class="text-[10px] text-gray-400">MANAGE</h1>
+
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-4 items-center"><i
+                            class="fa-solid fa-chart-pie"></i>Dashboard</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-wallet"></i>My
+                        wallet</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                            class="fa-solid fa-calendar-days"></i>Calender</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                            class="fa-solid fa-tent-arrow-left-right"></i>Recent transation</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                            class="fa-solid fa-square-poll-vertical"></i>statistics</a>
+                </div>
+                <div class="flex flex-col gap-4 mt-10 text-gray-400">
+                    <h1 class="text-[10px] text-gray-400">SETTINGS</h1>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                            class="fa-solid fa-gear"></i>setting</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-message"></i>my
+                        message</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                            class="fa-solid fa-bell"></i>notification</a>
+
+                </div>
+                <div class="flex flex-col gap-4 mt-20 text-gray-400">
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-moon"></i>theme</a>
+                    <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                            class="fa-solid fa-right-from-bracket"></i>logout</a>
+                </div>
+            </nav>
+        </div>
+        <div id="cls" class=" col-span-3 flex w-full justify-between p-4  z-15" onclick="toggleMenu()">
+            <p><i class="fa-solid fa-bars"></i></p>
+            <h1><i class="fa-solid fa-cloud text-blue-400"></i>cloud</h1>
+        </div>
+  <!--for mobile view-->
+        <div id="menu"
+            class=" md:hidden shadow-md z-20 h-screen gap-40 transform transition-all duration-3000 ease-in-out translate-x-full active">
+            <div class="flex flex-row gap-4">
+                <img src="image.jpg" alt="img" class="h-12 w-12 rounded-full">
+                <span class="flex flex-col">
+                    <h1 class="font-bold">Sumita Rai</h1>
+                    <p class="text-sm text-gray-400">sumitarai@gmail.com</p>
+                </span>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-10 text-gray-400">
+                <h1 class="text-[10px] text-gray-400">MANAGE</h1>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-4 items-center"><i
+                        class="fa-solid fa-chart-pie"></i>Dashboard</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-wallet"></i>My
+                    wallet</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                        class="fa-solid fa-calendar-days"></i>Calendar</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                        class="fa-solid fa-tent-arrow-left-right"></i>Recent transaction</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                        class="fa-solid fa-square-poll-vertical"></i>Statistics</a>
+            </div>
+            <div class="flex flex-col gap-4 mt-10 text-gray-400">
+                <h1 class="text-[10px] text-gray-400">SETTINGS</h1>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-gear"></i>Settings</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-message"></i>My
+                    message</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                        class="fa-solid fa-bell"></i>Notification</a>
+            </div>
+            <div class="flex flex-col gap-4 mt-20 text-gray-400">
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i class="fa-solid fa-moon"></i>Theme</a>
+                <a href="#" class="hover:text-blue-400 text-sm flex gap-2"><i
+                        class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            </div>
+            </nav>
+        </div>
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <nav class="p-3 flex bg-white justify-between items-center fixed top-0 left-0 right-0 z-50 shadow-md ">
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <span class="text-2xl  font-medium font-display capitalize ">Skywings</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12 text-xl">
+            <a href="#" class="font-700 hover:text-blue-500  capitalize">Home</a>
+            <a href="#" class="font-700 hover:text-blue-500 capitalize">ABOUT</a>
+            <a href="#" class="font-700 hover:text-blue-500 capitalize">TOUR</a>
+            <a href="#" class="font-700 hover:text-blue-500 capitalize">PACKAGE</a>
+            <a href="#" class="font-700 hover:text-blue-500 capitalize">CONTACT</a>
+        </div>
+        <div class="hidden lg:flex flex-1 justify-end ">
+            <button class="bg-blue-500 gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 ">
+                <span class="font-display font-500  text-2xl hover:text-white">BOOK TRIP</span>
+            </button>
+        </div>
+       
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+        <!--for mobile view-->
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white p-3 inset-3">
+            <div class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+
+                    <span class="text-lg font-medium font-display capitalize">Skywings</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()"><i class="fa-solid fa-xmark text-gray-500"></i>
+                </button>
+            </div>
+
+            <div class="mt-10 capitalize ">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg capitalize">HOME</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg capitalize">ABOUT</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">TOUR</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">PACKAGE</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">TOUR</a>
+
+            </div>
+            <div class="h-[1px] bg-gray-500 "></div>
+            <button class="mt-6 w-full  mx-auto flex gap-2 items-center px-4 py-6 rounded-lg hover:bg-gray-50">
+                <span class="font-display font-400 text-center">Developer</span>
+            </button>
+
+    </nav>
+    <div class="relative h-screen">
+        <img src="aeroplane.webp"
+            alt="img"
+        class="object-cover w-full h-full absolute inset-0"/>
+        <div class="absolute inset-1 flex flex-col justify-center items-start pl-20 text-black">
+            <h1 class="text-xl font-medium mb-6 uppercase">Elevate Your Travel Journey</h1>
+            <h2 class="text-6xl font-bold mb-6">Experience<br>The Magic Of<br>Flight!</h2>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-6 py-3 px-6 rounded">
+              Book A Trip Now <span><i class="fa-solid fa-circle-play"></i></span>
+            </button>
+    </div>
+    </div>
+    <div class="mt-20">
+        <div class="p-10 ">
+            <h1 class="font-bold text-4xl ">Popular Destination</h1>
+            <h1 class="text-xl mr-48 p-1 text-gray-500">Discover the most loved destination around the globe</h1>
+            <div class="grid relative grid-cols-3">
+                <div class="p-2 m-2">
+                    <img src="destination-1.jpg" alt="img"
+                    class="rounded-lg">
+                    <h3 class="text-xl ">Tradition and Futurism</h2>
+                        <p class="text-md text-gray-500">New York city,USA</p>
+                </div>
+                <div class="p-2 m-2">
+                  <img src="destination-2.jpg" alt="img"
+                  class="rounded-lg">
+                  <h3 class="text-xl ">Tradition and Futurism</h2>
+                      <p class="text-md text-gray-500">New York city,USA</p>
+              </div>
+              <div class="p-2 m-2">
+                <img src="destination-3.jpg" alt="img"
+                class="rounded-lg">
+                <h3 class="text-xl ">Tradition and Futurism</h2>
+                    <p class="text-md text-gray-500">New York city,USA</p>
+            </div>
+        </div>
+        </div>
+    </div>
+     <!--journey section-->
+    <div class=" text-center p-[50px]">
+      <span class="text-5xl text-center font-bold ">Journey To The Sky Made Simple!</span>
+      <p class="text-2xl text-gray-500 p-2">Efortless planning for your next Adventure</p>
+      </div>
+    </div>
+    <div class=" p-2 h-100  gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows: 96px;">
+          <div class=" group rounded-2xl bg-gray-500 ">
+            <div class=" rounded-2xl w-full  p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-2xl h-100">Native Notification</h3>
+            </div>
+            </div>
+            <div class="group rounded-2xl bg-gray-500 ">
+              <div class=" rounded-2xl w-full  p-6 flex flex-col gap-6 items-center">
+                <h3 class="text-2xl">Native Notification</h3>
+              </div>
+              </div>
+              <div class=" group rounded-2xl bg-gray-500 ">
+                <div class="rounded-2xl w-full  p-6 flex flex-col gap-6 items-center">
+                  <h3 class="text-2xl">Native Notification</h3>
+                </div>
+            </div>
+            </div>
+    <div class="flex w-full gap-10 p-7">
+      <div class="w-1/2">
+        <img src="showcase.jpg" alt="img">
+      </div>
+      <div class="">
+       <h1 class="text-4xl font-bold text-center">UNLEASH WANDERLUST WITH SKYWINGS</h1>
+       <p class="text-xl text-gray-500 p-3">Embark on a journey like no other with Skywings, where your travel dreams come to life. Our mission is to inspire and facilitate your adventures, whether you seek the vibrant energy of bustling cityscapes, the serene beauty of pristine beaches, or the captivating history of ancient landmarks. At Skywings, we provide expertly curated destinations and personalized itineraries, ensuring that every trip is tailored to your unique preferences.</p>
+        <p class="text-xl text-gray-500 p-2">.With Skywings as your ultimate travel companion, exploring the wonders of the world has never been easier. Our insider tips and local insights give you the tools to navigate new places with confidence and excitement. From the moment you start planning to the day you return home, we are dedicated to making your travel experience seamless and enriching.</p>
+      </div>
+    </div>
+    <div class=" p-2 h-1000 gap-6 lg:grid lg:grid-cols-3">
+      <div class=" group rounded-2xl bg-gray-200">
+        <div class=" rounded-2xl w-full  p-6 flex flex-col gap-6 items-center">
+          <h3 class="text-8xl h-1000 text-blue-500">12k</h3>
+        </div>
+        </div>
+        </div>
+        <div class=" p-2 h-1000 gap-6 lg:grid lg:grid-cols-3"style=">
+          <div class="group rounded-2xl bg-gray-200">
+            <div class=" rounded-2xl w-full  p-6 flex flex-col gap-6 items-center">
+              <h3 class="text-8xl h-1000 text-blue-500">13k</h3>
+            </div>
+            </div>
+            </div>
+            <div class=" p-2 h-1000 gap-6 lg:grid lg:grid-cols-3"style="">
+              <div class=" group rounded-2xl bg-gray-200">
+                <div class=" rounded-2xl w-full  p-6 flex flex-col gap-6 items-center">
+                  <h3 class="text-8xl h-1000 text-blue-500">14k</h3>
+                </div>
+                </div>
+                </div>
+    <!--for footer code -->
+    <footer class="mx-auto max-w-auto px-12 py-12">
+        <div class="grid grid-cols-4 mt-20 rounded-5xl text-sm justify-between bg-gray-300  ">
+          <div class="px-2 py-12 m-3 gap-4 justify-between text-sm">
+            <a href="#" class="font-bold text-2xl text-black-400">Skywings</a>
+            <p class="flex flex-wrap font-weight ">
+                Explore the world with ease and excitement through our
+              comprehensive travel platform. Your journey begins here,
+              where seamless planning meets unforgettable experiences.
+            </p>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+  
+          <div class="px-2 py-12 m-3 gap-4 justify-between text-sm">
+            <h1 class="font-bold text-2xl text-black-400">quick line</h1>
+            <ul class="font-light font-weight">
+              <li>home</li>
+              <li>flight</li>
+              <li> hotel</li>
+              <li>cruise</li>
+            </ul>
+          </div>
+          <div class="px-2 py-12 m-3 gap-4 justify-between text-sm">
+            <h1 class="text-2xl text-black-400 font-bold">contact us</h1>
+          <p><i class="fa-solid fa-phone"></i><span>+9779815019001</span></p>
+          <p><i class="fa-regular fa-envelope"></i><span>info@Skywings</span></p>
+          <p><i class="fa-solid fa-location-dot"></i><span>kathmandu, Nepal</span></p>
+        </div>
+        <form class="px-2 py-12 m-3 gap-4 justify-between text-sm">
+          <h1 class="font-bold 
+          text-2xl text-black-400">subscribe</h1>
+          <input type="text" placeholder="Enter your email"><br>
+          <button class="bg-blue-500 px-12 py-2">subscribe</button>
+        </form>
+
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
